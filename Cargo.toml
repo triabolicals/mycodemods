@@ -1,0 +1,81 @@
+[package]
+name = "codemods"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[package.metadata.skyline]
+titleid = "01006A800016E000" # Smash Ultimate
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+skyline = { git = "https://github.com/ultimate-research/skyline-rs", version="0.6.0" }
+cobapi = { git = "https://github.com/DivineDragonFanClub/cobapi" }
+unity-nx = { git = "https://github.com/DivineDragonFanClub/unity2", tag="0.1.1"}
+engage-il2cpp = { git = "https://github.com/DivineDragonFanClub/engage-il2cpp", features = [
+    "unity_engine",
+    "app-sortieunitselect", "app-skillinheritancemenucontent", "app-skillinheritancemenuitem", "app-sortiesequenceunitselect",
+    "root-mappaneltarget", "app-shopbuyyesnodialog", "app-mapsequencehuman", "app-dlcmanager",
+    "app-expsequence", "root-configsequence", "root-configmenucontent", "app-gameui", "root-configroot", "root-configmenu",
+    "app-unitreliancedata", "app-loadinglogo", "app-shopcore", "app-unitrecord", "app-itemmenudetailsetter",
+    "app-fishingdispospatterndata", "app-muscleexerciseprizedata", "app-unitenhancefactors", "app-refreshvariable", "app-refreshfacilityselectmenu",
+    "app-shopunitselectroot", "app-shopunitselectmenu", "app-cookdata", "app-cooking_menu-unitselectmenu_2", "app-tastedata", "app-basicdialog",
+    "app-refineshopengravegodroot", "app-refineitemdetailwindow",
+    "app-gmapmapinfocontent",
+    "app-hubaccessdata", "app-itemlistyesnodialog", "app-gameicon", "app-transporter",
+    "app-refreshsequence", "app-hubfleamarketsequence", "app-hubweaponshopsequence", "app-hubitemshopsequence", "app-hubrefineshopsequence",
+    "app-sortiesequenceitemshop", "app-sortiesequenceweaponshop", "app-jukeboxsequence", "app-godroompedestalsequence", "app-godroompedestaltopmenu",
+    "app-noticeboardsequence", "app-noticeboardtopmenu", "app-gmapmenucontent", "app-sortietopmenucontent",
+    "app-talk3_d-characterfactoryasync_2", "system-action_1", "combat-character", "app-unitinfowindowcharamodel", "app-unitinfowindowcharaupdater",
+    "app-procenummethod", "app-bondpopupcontroller", "app-gameparam", "app-fishingtargetlistdata", "app-fishingfishdata",
+    "app-commonrewardsequence",
+    "app-myroomreliancesubselect", "app-moviesequence", "app-eventdemosequence",
+    "app-gameusergmapdata", "moon_sharp-interpreter-dynvalue", "app-scriptsystem",
+    "app-animalsequence", "app-animaldata",
+    "app-battleinfo", "app-battleinfoside", "app-godbondholderpool", "app-godbond", "app-godbondholder", "app-godleveldata", "app-battlegrow",
+    "app-assettable", "app-assettable-types", "app-chapterdata", "app-gmapsequence", "app-unitinfo", "app-unitinfo-types", "app-hubsequence", "app-gmapsequence-types",
+    "app-structdata_1", "app-structbase", "app-gamevariable", "app-unitpool",
+    "app-unit", "app-unit-types", "app-random_2", "app-basicmenu", "app-basicmenucontent", "app-basicmenuselect",
+    "app-persondata", "app-jobdata", "app-itemdata", "app-goddata", "app-godunit",
+    "app-gameuserdata", "app-singletonclass_1", "app-stream_2", "app-hubaccess", "app-force", "app-sortieselectionunitmanager",
+    "app-resourcemanager_2", "app-skillarray", "app-skillarray-types",
+    "system-collections-generic-dictionary_2", "system-collections-generic-list_1",
+    "app-hubminimap", "app-rendermanager", "app-hubplayercontroller", "app-hublocatorgroup",
+    "app-singletonclass_1-types", "app-singletonprocinst_1", "app-singletonprocinst_1-types",
+    "app-shopunitselectmenuitem", "app-shopunitselectmenucontent", "app-shopunitselectmenuitemcontent",
+    "unity_engine", "app-fade", "app-procdesc", "app-procdesc-types", "app-fade-types", "app-proc", "app-procvoidfunction", "app-procvoidmethod", "app-procboolmethod",
+    "tm_pro-textmeshpro", "app-facethumbnail", "app-godpool", "app-singletonpool_2",
+    "app-unitfor", "combat-kaneko", "system-object", "app-backgroundmanager", "app-unitstatus",
+    "app-hubmenusequence", "app-hubmenu", "app-hubmenucontent", "app-unitstatussetter", "app-levelupsequnece",
+    "app-singletonmonobehaviour_1", "app-singletonmonobehaviourlist_1", "app-unitselectmenu", "app-mapmind", "app-mess", "app-gamemessage",
+    "app-unitutil",
+    "app-skillinheritancesequence", "app-skillinheritancemenu", "app-skillinheritancemenuitemcontent",
+    "system-action", "app-bitstruct", "app-pad", "app-sortieutil",
+    "app-titlebar", "app-ut", "app-mainsequence", "combat-combatrecord", "app-battlecalculator", "app-battleside", "combat-side",
+    "app-telopmanager", "app-gamesound", "app-keyhelpdata", "app-structdataarray_1", "app-unitinfoparammanager", "app-capabilitybase_1",
+    "app-classchangeroot", "app-classchangejobmenu", "app-classchangejobmenucontent", "app-unitinfoparamsetter", "app-classchange",
+    "app-helpparamsetter", "app-unititem", "app-skilldata",
+    "app-aidata", "app-aivalue", "app-mapsituation", "app-unitai",
+    "app-arenaordersequence", "app-mapsequence", "app-unitgrowsequence", "app-basicdialogcontent",
+    "app-gamecolor", "app-singletonscriptableobject_1",
+    "app-jukeboxdata", "app-musicdata", "app-dragonrideprizedata",
+    "app-mapsequencebattleaction", "app-tutorialdata",
+    "app-ringgachasequence", "app-ringdata", "app-ringsynthesissequence",
+    "app-hubvariable", "app-hubutil",
+    "app-softwarekeyboard", "app-foodstuffdata", "app-achievedata",
+    "app-reliancepopupcontroller", "app-unitreliance",
+    "app-hubmascotsequence", "app-mascotfooddata", "app-hubfacilitydata", "app-mascotmenusequence", "app-mascotfriendlycontent",
+    "app-mascotfoodeatsequence",
+    "app-fishingfish", "app-fishinggamesequence", "app-fishingsequence", "app-dragonridesequence",
+    "app-hubcookingsequence", "app-wellsequence",
+    "combat-arenacombatsequence",
+
+] }
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
